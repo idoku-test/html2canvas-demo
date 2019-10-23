@@ -9,23 +9,28 @@
 </head>
 <script type="text/javascript">
     function takeScreenshot() {
-        var target = document.getElementById('content');
+        var target = document.getElementById('detail_info');
         var width = target.offsetWidth;
         var height = target.offsetHeight;
 
         var opts = {
             width: width,
-            height: height
+            height: height,   
+            x:0,
+            y:0,
+            scrollX:0,
+            scrollY:0,           
         }
         html2canvas(target, opts).then(function (canvas) {
-            document.body.appendChild(canvas);
+            var pageData = canvas.toDataURL('image/jpeg', 1.0);
+
+document.getElementById('img').src = pageData;
         });
     }
 </script>
 
 <body>
-    <div id="content">
-       
+    <div id="content">       
             <div id="view">
                 <div id="detail_info">
                     <div id="dsdjb_info">
@@ -387,7 +392,12 @@
     <div>
         <input type="button" value="截图" onclick="takeScreenshot()">
     </div>
-    <div id="image"></div>
+    <div id="image">
+        
+    </div>
+     <div>
+         <img id="img" src=""/>
+     </div>
 
 </body>
 

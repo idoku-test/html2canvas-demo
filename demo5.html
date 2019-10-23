@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>html2canvas demo</title>
+    <script type="text/javascript" src="html2canvas.js"></script>
+</head>
+<script type="text/javascript">
+    function takeScreenshot() {
+       
+        var target = document.getElementById('view');
+        var width = target.offsetWidth;
+        var height = target.offsetHeight;
+
+        var opts = {
+            width: width,
+            height: height,   
+            x:0,
+            y:0,
+            scrollX:0,
+            scrollY:0,           
+        }
+        html2canvas(target, opts).then(function (canvas) {
+            var pageData = canvas.toDataURL('image/jpeg', 1.0);
+
+            document.getElementById('img').src = pageData;
+        });
+    }
+    
+</script>
+
+<body>
+    <div>
+        <div id="view">
+            <table width="1200px">
+							
+                <tbody><tr>	
+                                                                            <th width="150px">First Name</th>
+                                                                                                        <th width="150px">Last Name</th>
+                                                                                                        <th width="150px">Gender</th>
+                                                                                                        <th width="150px">Age</th>
+                                                                                                        <th width="150px">Email</th>
+                                                                                                        <th width="150px">Phone</th>
+                                                                                                        <th width="150px">Education</th>
+                                                                                                        <th width="150px">Occupation</th>
+                                                                        </tr>	
+                
+                <tr>	
+                                                                            <td>Garry</td>
+                                                                                                        <td>Douglas</td>
+                                                                                                        <td>Male</td>
+                                                                                                        <td>18</td>
+                                                                                                        <td>g.douglas@randatmail.com</td>
+                                                                                                        <td>752-0536-80</td>
+                                                                                                        <td>Lower secondary</td>
+                                                                                                        <td>Jeweller</td>
+                                                                        </tr>	
+                
+                <tr>	
+                                                                            <td>Aiden</td>
+                                                                                                        <td>Owens</td>
+                                                                                                        <td>Male</td>
+                                                                                                        <td>29</td>
+                                                                                                        <td>a.owens@randatmail.com</td>
+                                                                                                        <td>747-9029-66</td>
+                                                                                                        <td>Master</td>
+                                                                                                        <td>Archeologist</td>
+                                                                        </tr>	
+                
+                <tr>	
+                                                                            <td>Ryan</td>
+                                                                                                        <td>Thomas</td>
+                                                                                                        <td>Male</td>
+                                                                                                        <td>20</td>
+                                                                                                        <td>r.thomas@randatmail.com</td>
+                                                                                                        <td>637-0534-37</td>
+                                                                                                        <td>Lower secondary</td>
+                                                                                                        <td>Journalist</td>
+                                                                        </tr>	
+                
+                <tr>	
+                                                                            <td>Heather</td>
+                                                                                                        <td>Baker</td>
+                                                                                                        <td>Female</td>
+                                                                                                        <td>22</td>
+                                                                                                        <td>h.baker@randatmail.com</td>
+                                                                                                        <td>117-9445-71</td>
+                                                                                                        <td>Master</td>
+                                                                                                        <td>Chemist</td>
+                                                                        </tr>	
+                
+                <tr>	
+                                                                            <td>Isabella</td>
+                                                                                                        <td>Murray</td>
+                                                                                                        <td>Female</td>
+                                                                                                        <td>29</td>
+                                                                                                        <td>i.murray@randatmail.com</td>
+                                                                                                        <td>042-4884-66</td>
+                                                                                                        <td>Bachelor</td>
+                                                                                                        <td>Astronomer</td>
+                                                                        </tr>	
+                
+                <tr>	
+                                                                            <td>Samantha</td>
+                                                                                                        <td>Cameron</td>
+                                                                                                        <td>Female</td>
+                                                                                                        <td>20</td>
+                                                                                                        <td>s.cameron@randatmail.com</td>
+                                                                                                        <td>334-4968-04</td>
+                                                                                                        <td>Bachelor</td>
+                                                                                                        <td>Journalist</td>
+                                                                        </tr>	
+                
+                <tr>	
+                                                                            <td>Lenny</td>
+                                                                                                        <td>Robinson</td>
+                                                                                                        <td>Male</td>
+                                                                                                        <td>22</td>
+                                                                                                        <td>l.robinson@randatmail.com</td>
+                                                                                                        <td>755-8547-42</td>
+                                                                                                        <td>Bachelor</td>
+                                                                                                        <td>Auditor</td>
+                                                                        </tr>	
+                
+                <tr>	
+                                                                            <td>Derek</td>
+                                                                                                        <td>Spencer</td>
+                                                                                                        <td>Male</td>
+                                                                                                        <td>18</td>
+                                                                                                        <td>d.spencer@randatmail.com</td>
+                                                                                                        <td>148-1912-11</td>
+                                                                                                        <td>Doctoral</td>
+                                                                                                        <td>Veterinarian</td>
+                                                                        </tr>	
+                
+                <tr>	
+                                                                            <td>Rosie</td>
+                                                                                                        <td>Brooks</td>
+                                                                                                        <td>Female</td>
+                                                                                                        <td>29</td>
+                                                                                                        <td>r.brooks@randatmail.com</td>
+                                                                                                        <td>244-9142-75</td>
+                                                                                                        <td>Upper secondary</td>
+                                                                                                        <td>Fashion Designer</td>
+                                                                        </tr>	
+                
+                <tr>	
+                                                                            <td>Oscar</td>
+                                                                                                        <td>Morris</td>
+                                                                                                        <td>Male</td>
+                                                                                                        <td>30</td>
+                                                                                                        <td>o.morris@randatmail.com</td>
+                                                                                                        <td>817-4236-15</td>
+                                                                                                        <td>Doctoral</td>
+                                                                                                        <td>Insurer</td>
+                                                                        </tr>	
+                                    </tbody></table>
+        </div>
+
+        <div>
+            <input type="button" value="截图" onclick="takeScreenshot()">
+        </div>
+        <div id="image"></div>
+        <div>
+            <img id="img" src=""/>
+        </div>
+    </div>
+   
+</body>
+
+</html>
