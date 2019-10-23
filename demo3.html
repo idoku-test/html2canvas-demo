@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>html2canvas demo</title>
+    <script type="text/javascript" src="html2canvas.js"></script>
+</head>
+<script type="text/javascript">
+    function takeScreenshot() {
+        var target = document.getElementById('content');
+        var width = target.offsetWidth;
+        var height = target.offsetHeight;
+
+        var opts = {
+            width: width,
+            height: height
+        }
+        html2canvas(target, opts).then(function (canvas) {
+            document.body.appendChild(canvas);
+        });
+    }
+</script>
+
+<body>
+    <div id="content">
+       
+            <div id="view">
+                <div id="detail_info">
+                    <div id="dsdjb_info">
+                        <h5> 登记信息 </h5>
+                        <table id="dsdjb">
+                            <tbody id="dsdjb_table">
+                                <tr>
+                                    <td>社会信用代码</td>
+                                    <td>91430121799149008J</td>
+                                    <td>纳税人名称</td>
+                                    <td>湖南格瑞特置业有限公司</td>
+                                </tr>
+                                <tr>
+                                    <td>纳税人状态</td>
+                                    <td>正常</td>
+                                    <td>课征主体登记类型</td>
+                                    <td>单位纳税人税务登记</td>
+                                </tr>
+                                <tr>
+                                    <td>登记注册类型</td>
+                                    <td>私营有限责任公司</td>
+                                    <td>生产经营地址</td>
+                                    <td>湖南省长沙市经济技术开发区中南汽车世界物流园Y07栋</td>
+                                </tr>
+                                <tr>
+                                    <td>行政区划</td>
+                                    <td>长沙县</td>
+                                    <td>注册地址</td>
+                                    <td>湖南省长沙县湘龙街道中南汽车世界物流园Z10栋</td>
+                                </tr>
+                                <tr>
+                                    <td>街道乡镇</td>
+                                    <td>星沙街道</td>
+                                    <td>法定代表人姓名</td>
+                                    <td>张新德</td>
+                                </tr>
+                                <tr>
+                                    <td>经营范围</td>
+                                    <td>房地产开发经营;货运信息配载、货运代理;物流配送及信息咨询、仓储服务(不含危化品和监控品、易燃易爆品);房屋租赁;场地租赁;市场经营管理、摊位出租;代收代缴水电费。(依法须经批准的项目,经相关部门批准后方可开展经营活动)
+                                    </td>
+                                    <td>纳税人联系电话</td>
+                                    <td>073184088026</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="taxStatstics">
+                        <h5> 纳税信息 </h5>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>序号</td>
+                                    <td>类型</td>
+                                    <td>价格（元）</td>
+                                    <td>价格合计（元）</td>
+                                </tr>
+                            </thead>
+                            <tbody id="taxStatstics_table">
+                                <tr>
+                                    <td>1</td>
+                                    <td>印花税</td>
+                                    <td>58970.6</td>
+                                    <td rowspan="11">4869271.85</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>水利建设专项收入</td>
+                                    <td>2648.29</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>地方教育附加</td>
+                                    <td>38806.64</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>其他收入</td>
+                                    <td>2861.59</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>城镇土地使用税</td>
+                                    <td>714576.08</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>土地增值税</td>
+                                    <td>1858832.07</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>增值税</td>
+                                    <td>1893966.85</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>教育费附加</td>
+                                    <td>58209.95</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>城市维护建设税</td>
+                                    <td>97016.58</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>残疾人就业保障金</td>
+                                    <td>2146.2</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>个人所得税</td>
+                                    <td>141237</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="creditRating">
+                        信用等级
+                        <table>
+                            <tbody id="creditRating_table">
+                                <tr>
+                                    <td>评价年度</td>
+                                    <td>2019</td>
+                                    <td>2018</td>
+                                    <td>2017</td>
+                                </tr>
+                                <tr>
+                                    <td>评价结果</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>B</td>
+                                </tr>
+                                <tr>
+                                    <td>本局确认分值</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>B</td>
+                                </tr>
+                                <tr>
+                                    <td>联合评价结果</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>90</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="landinfo">
+                        <h5> 企业土地信息 </h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>序号</td>
+                                    <td>土地使用权人</td>
+                                    <td>土地使用权证号</td>
+                                    <td>原工地证号</td>
+                                    <td>宗地号</td>
+                                    <td>土地位置</td>
+                                    <td>宗地面积</td>
+                                </tr>
+                            </thead>
+                            <tbody id="landinfo_table">
+                                <tr>
+                                    <td>1</td>
+                                    <td>湖南格瑞特置业有限公司</td>
+                                    <td>湘(2017)长沙县不动产权第0021078号</td>
+                                    <td>长国用(2011)第1101号</td>
+                                    <td>430121003006GB00031</td>
+                                    <td>星沙中南汽车世界</td>
+                                    <td>20935</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>湖南格瑞特置业有限公司</td>
+                                    <td>湘(2017)长沙县不动产权第0021080号</td>
+                                    <td>湘(2017)长沙县不动产权第0011944号</td>
+                                    <td>430121003006GB00097</td>
+                                    <td>星沙西霞路以西、武广铁路以东</td>
+                                    <td>11430</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>湖南格瑞特置业有限公司</td>
+                                    <td>湘(2017)长沙县不动产权第0021082号</td>
+                                    <td>湘(2017)长沙县不动产权第0011931号</td>
+                                    <td>430121003006GB00032</td>
+                                    <td>星沙中南汽车世界</td>
+                                    <td>14810</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>湖南格瑞特置业有限公司</td>
+                                    <td>湘(2017)长沙县不动产权第0020878号</td>
+                                    <td>长国用(2010)第3256号</td>
+                                    <td>430121003006GB00019</td>
+                                    <td>星沙西霞路以西，武广铁路以东</td>
+                                    <td>15732</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>湖南格瑞特置业有限公司</td>
+                                    <td>湘(2017)长沙县不动产权第0021047号</td>
+                                    <td>长国用(2010)第4384号</td>
+                                    <td>430121003006GB00081</td>
+                                    <td>星沙西霞路以西，武广铁路以东</td>
+                                    <td>17781</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>湖南格瑞特置业有限公司</td>
+                                    <td>湘(2017)长沙县不动产权第0021055号</td>
+                                    <td>长国用(2010)第3254号</td>
+                                    <td>430121003006GB00048</td>
+                                    <td>星沙蒸湘西路以北、武广铁路以东</td>
+                                    <td>10635</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>湖南格瑞特置业有限公司</td>
+                                    <td>湘(2017)长沙县不动产权第0021063号</td>
+                                    <td>长国用(2010)第4385号</td>
+                                    <td>430121003006GB00082</td>
+                                    <td>星沙蒸湘西路北、武广铁路东</td>
+                                    <td>12654</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>湖南格瑞特置业有限公司</td>
+                                    <td>湘(2017)长沙县不动产权第0021067号</td>
+                                    <td>长国用(2011)第1102号</td>
+                                    <td>430121003006GB00033</td>
+                                    <td>星沙西霞路以西、武广铁路以东</td>
+                                    <td>28265</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>湖南格瑞特置业有限公司</td>
+                                    <td>湘(2017)长沙县不动产权第0021069号</td>
+                                    <td>长国用(2010)第3252号</td>
+                                    <td>430121003006GB00047</td>
+                                    <td>星沙中南汽车世界蒸湘西路以北</td>
+                                    <td>632</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>湖南格瑞特置业有限公司</td>
+                                    <td>湘(2017)长沙县不动产权第0021071号</td>
+                                    <td>长国用(2008)第3170号</td>
+                                    <td>430121003006GB00036</td>
+                                    <td>星沙中南汽车世界</td>
+                                    <td>9904</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>湖南格瑞特置业有限公司</td>
+                                    <td>湘(2017)长沙县不动产权第0021073号</td>
+                                    <td>长国用(2010)第4383号</td>
+                                    <td>430121003006GB00079</td>
+                                    <td>星沙中南汽车世界</td>
+                                    <td>18530</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>湖南格瑞特置业有限公司</td>
+                                    <td>湘(2017)长沙县不动产权第0021075号</td>
+                                    <td>长国用(2010)第4382号</td>
+                                    <td>430121003006GB00077</td>
+                                    <td>星沙中南汽车世界</td>
+                                    <td>16792</td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>湖南格瑞特置业有限公司</td>
+                                    <td>湘(2017)长沙县不动产权第0021077号</td>
+                                    <td>长国用(2007)第1774号</td>
+                                    <td>430121003006GB00074</td>
+                                    <td>星沙中南汽车世界</td>
+                                    <td>14102</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>湖南格瑞特置业有限公司</td>
+                                    <td>null</td>
+                                    <td>湘(2017)长沙县不动产权第0021078号</td>
+                                    <td>430121003006GB00128</td>
+                                    <td>星沙中南汽车世界</td>
+                                    <td>7377.0200</td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>湖南格瑞特置业有限公司</td>
+                                    <td>null</td>
+                                    <td>null</td>
+                                    <td>430121003006GB00248</td>
+                                    <td>凉塘西路以南、物贸路以东</td>
+                                    <td>59328</td>
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <td>湖南格瑞特置业有限公司</td>
+                                    <td>null</td>
+                                    <td>null</td>
+                                    <td>430121003006GB00249</td>
+                                    <td>凉塘西路以南、武广铁路以东</td>
+                                    <td>56802</td>
+                                </tr>
+                                <tr>
+                                    <td>17</td>
+                                    <td>湖南格瑞特置业有限公司</td>
+                                    <td>null</td>
+                                    <td>null</td>
+                                    <td>430121003006GB00247</td>
+                                    <td>长沙县湘龙街道西霞路以西,武广铁路以东</td>
+                                    <td>29876.51</td>
+                                </tr>
+                                <tr>
+                                    <td>18</td>
+                                    <td>湖南格瑞特置业有限公司</td>
+                                    <td>null</td>
+                                    <td>null</td>
+                                    <td>430121003006GB00243</td>
+                                    <td>长沙县湘龙街道西霞路以西、武广铁路以东</td>
+                                    <td>9818.49</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="houseinfo">
+                        <h5> 企业房产信息 </h5>
+                        <table id="tb_houseinfo">
+                            <thead>
+                                <tr>
+                                    <td>序号</td>
+                                    <td>产权证号</td>
+                                    <td>产权人</td>
+                                    <td>联系电话</td>
+                                    <td>产权人社会信用代码</td>
+                                    <td>房产面积</td>
+                                    <td>房屋坐落</td>
+                                    <td>房产用途</td>
+                                    <td>幢号</td>
+                                    <td>房屋建成时间</td>
+                                    <td>房产发证时间</td>
+                                    <td>销售金额（元）</td>
+                                    <td>行政区划</td>
+                                </tr>
+                            </thead>
+                            <tbody id="houseinfo_table"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+      
+    </div>
+
+    <div>
+        <input type="button" value="截图" onclick="takeScreenshot()">
+    </div>
+    <div id="image"></div>
+
+</body>
+
+</html>
