@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>html2canvas demo</title>
     <script type="text/javascript" src="html2canvas.js"></script>
+    <script type="text/javascript" src="canvas2image.js"></script>
+    
 </head>
 <script type="text/javascript">
 function takeScreenshot() {
@@ -13,29 +15,45 @@ function takeScreenshot() {
     var height = target.offsetHeight;   
     var canvas = document.createElement("canvas");
     var scale = 2;
-    canvas.width = width * 4;
-    canvas.height = height * 4;
-    var ctx = canvas.getContext("2d");
-    ctx.scale(scale, scale);
+    canvas.width = width * scale;
+    canvas.height = height * scale;
+    //var ctx = canvas.getContext("2d");
+    //ctx.scale(scale, scale);
     //ctx.translate(-offsetLeft, -offsetTop);
+    
+
+    html2canvas(target, {  }).then(function (canvas) {
+        var img =    document.getElementById('img');
+        var pageData = canvas.toDataURL('image/jpeg', 1.0);
+        img.src = pageData;
+        //img.style.width = width /2;
+        //img.style.height = canvas.height /2;
+    });
 
 
   
 
         var opts = {
-           scale: scale,
-           canvas: canvas,                        
+           scale: 2,
+           canvas: canvas,    
+           width :width,
+           height:height,                    
+           dpi: window.devicePixelRatio*2,
         }
         html2canvas(target, opts).then(function (canvas) {
             
-        var pageData = canvas.toDataURL('image/jpeg', 1.0);
-        
-        var img = document.getElementById('img');
-        img.src = pageData;
-        //img.style.width = canvas.width/2 + "pt";
-        //img.style.height = canvas.height/2 + "pt";
+       
 
-});
+        var pageData =  Canvas2Image.convertToImage(canvas, width, height);
+        pageData.style.width = "595pt";
+        
+        var imgaes = document.getElementById('imgaes');
+                    
+            imgaes.appendChild(pageData);
+        });
+
+
+
 }
 </script>
 <body>
@@ -170,8 +188,9 @@ function takeScreenshot() {
 
     <div>
         <input type="button" value="截图" onclick="takeScreenshot()">
-    </div>
-    <img id="img" src="" style=" width: 595pt;"/>
+    </div>  
+    <img id="img" src=""  style=" width: 595pt;"/>
+    <div id="imgaes" style=" width: 595pt;"></div>
 </div>
 </body>
 
